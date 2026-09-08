@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def my_fitting_tool(x_data, y_data, degree=2):
+def my_fitting_tool(x_data, y_data, degree=2) -> None:
     """
     这是 june 的第一个专属拟合工具
     输入：x_data, y_data, degree
