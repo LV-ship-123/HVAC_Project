@@ -32,21 +32,21 @@ The original figure shows the relationship between cooling tower outlet temperat
 
 > The optimal setpoint is at the lower boundary (30°C), confirming that power consumption increases with temperature in this range.
 
----
-
 ## 4. File Structure (Ordered by Workflow)
-HVAC_Project/
-├── 01_plot_fig8a.py # Step 1: Basic reproduction
-├── 02_my_toolkit.py # Step 2: Reusable fitting function
-├── 03_test_my_tool.py # Step 3: Test the toolkit
-├── 04_search_optimal.py # Step 4: Brute-force validation
-├── 05_optimize_scipy.py # Step 5: Professional optimizer
-├── 06_plot_with_optimum.py # Step 6: Final visualization
-├── 01_Fig8a_base.png # Output of Step 1
-├── 06_Fig8a_optimal.png # Final output (with green star)
-└── README.md # This file
 
----
+```
+HVAC_Project/
+├── 01_plot_fig8a.py          # Step 1: Basic reproduction
+├── 02_my_toolkit.py          # Step 2: Reusable fitting function
+├── 03_test_my_tool.py        # Step 3: Test the toolkit
+├── 04_search_optimal.py      # Step 4: Brute-force validation
+├── 05_optimize_scipy.py      # Step 5: Professional optimizer
+├── 06_plot_with_optimum.py   # Step 6: Final visualization
+├── 01_Fig8a_base.png         # Output of Step 1
+├── 06_Fig8a_optimal.png      # Final output (with green star)
+└── README.md                 # This file
+
+```
 
 ## 5. Dependencies
 - Python 3.x
