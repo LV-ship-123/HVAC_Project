@@ -52,22 +52,33 @@ It has since evolved into a **complete physical modeling and optimization pipeli
 
 ```
 HVAC_Project/
-├── 01_plot_fig8a.py
-├── 02_my_toolkit.py
-├── 03_test_my_tool.py
-├── 04_search_optimal.py
-├── 05_optimize_scipy.py
-├── 06_plot_with_optimum.py
-├── 07_genetic_algorithm.py
-├── 08_merkel_model.py
-├── 09_compare_methods.py
-├── 10_robustness_analysis.py
-├── 11_merkel_ode.py
-├── 12_merkel_physical_fixed.py
-├── 13_merkel_true_physical.py
-├── 14_merkel_with_penalty.py
-├── 15_merkel_ode_coupled.py
-└── README.md
+├── 01_plot_fig8a.py            # Step 1: Basic reproduction
+├── 01_Fig8a_base.png           # Output of Step 1
+├── 02_my_toolkit.py            # Step 2: Reusable fitting function
+├── 02_Fitted_verify.png        # Output of Step 2 (test the toolkit)
+├── 03_test_my_tool.py          # Step 3: Test the toolkit
+├── 04_search_optimal.py        # Step 4: Brute-force validation
+├── 05_optimize_scipy.py        # Step 5: L-BFGS-B optimizer
+├── 06_plot_with_optimum.py     # Step 6: Visualization with optimum point
+├── 06_Fig8a_optimal.png        # Final output (with green star)
+├── 07_genetic_algorithm.py     # Step 7: Genetic algorithm verification
+├── 08_merkel_model.py          # Step 8: First physical trade-off model
+├── 09_compare_methods.py       # Step 9: Method comparison (L-BFGS-B vs GA)
+├── 10_robustness_analysis.py   # Step 10: Robustness test (50 random perturbations)
+├── 11_merkel_ode.py            # Step 11: ODE attempt (air flow bug)
+├── 12_merkel_physical_fixed.py # Step 12: ε-NTU fix (still flawed)
+├── 13_merkel_true_physical.py  # Step 13: Energy balance (correct physics)
+├── 14_merkel_with_penalty.py   # Step 14: Feasibility penalty
+├── 15_merkel_ode_coupled.py    # Step 15: Merkel ODE coupled (final)
+├── 07_Physical_Optimum.png     # Output of Step 7/8 (physical model)
+├── 08_Method_Comparison.png    # Output of Step 9 (method comparison)
+├── 09_Robustness_Distribution.png # Output of Step 10 (robustness)
+├── 10_Merkel_ODE_Optimization.png # Output of Step 11 (ODE attempt)
+├── 11_Merkel_Fixed_Optimization.png # Output of Step 12 (ε-NTU fix)
+├── 12_True_Physical_Optimization.png # Output of Step 13 (true physical)
+├── 13_Merkel_With_Penalty.png  # Output of Step 14 (penalty)
+├── 14_Merkel_ODE_Coupled.png   # Output of Step 15 (final ODE)
+└── README.md                   # This file
 ```
 
 ---
@@ -80,6 +91,7 @@ HVAC_Project/
 - scipy
 
 Install via:
+
 ```bash
 pip install numpy matplotlib scipy
 6. How to Run
