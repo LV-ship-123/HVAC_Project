@@ -8,8 +8,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import minimize, differential_evolution
 
-def plot_fitting(x_data, y_data, degree=2):
-    """通用拟合绘图函数：输入数据，输出拟合曲线图"""
+def my_fitting_tool(x_data, y_data, degree=2):
+    """
+    功能: 封装多项式拟合和绘图逻辑，输入数据，输出拟合系数。
+    输入: x_data（横坐标数据）, y_data（纵坐标数据）, degree（拟合次数，默认2次）
+    输出: 拟合系数 coefs
+    """
     coefs = np.polyfit(x_data, y_data, degree)
     x_smooth = np.linspace(min(x_data), max(x_data), 100)
     y_smooth = np.polyval(coefs, x_smooth)
@@ -21,9 +25,3 @@ def plot_fitting(x_data, y_data, degree=2):
     plt.legend()
     plt.show()
     return coefs
-def my_fitting_tool(x_data, y_data, degree=2):
-    """
-    输入: x_data, y_data, degree
-    输出: 拟合系数
-    说明: 封装多项式拟合和绘图逻辑
-    """
