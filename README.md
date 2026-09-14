@@ -93,7 +93,7 @@ HVAC_Project/
 Install via:
 
 ```bash
-pip install numpy matplotlib scipy
+pip install -r requirements.txt
 ```
 
 ---
