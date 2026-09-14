@@ -110,5 +110,21 @@ if __name__ == "__main__":
     ode_cfg = get_ode_params()
     print(f"进水温度: {ode_cfg['T_in']}°C，湿球温度: {ode_cfg['T_wb']}°C")
     print(f"ODE 求解容差 rtol={ode_cfg['rtol']}, atol={ode_cfg['atol']}")
+
+        # 测试 3：画图测试（验证 my_fitting_tool 能否独立画图）
+    print("\n[3] 测试画图功能：")
+    
+    # 准备两组测试数据（这里直接用论文图8a的4个点）
+    T_test = [30, 31, 32, 33]
+    P_test = [108, 109.5, 110.5, 111.5]
+    
+    # 打印提示，告诉用户图马上弹出来
+    print("正在生成拟合图...")
+    
+    # 调用我们封装好的画图函数
+    my_fitting_tool(T_test, P_test)
+    
+    # 图关掉之后，打印这句提示，表示流程结束
+    print("画图测试完成！")
     
     print("\n================ 测试全部通过！utils.py 运行正常！ ================")
